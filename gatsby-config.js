@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `GND Donatation`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `GND Donation`,
+    description: `Donation Page`,
     author: `@Janice Zosa`,
   },
   plugins: [

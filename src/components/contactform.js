@@ -7,7 +7,7 @@ import TextField from '@material-ui/core/TextField';
 
 const styles = theme => ({
   container: {
-    display: 'grid',
+    display: 'flex',
     flexWrap: 'wrap',
   },
   textField: {
@@ -64,7 +64,8 @@ class TextFields extends React.Component {
     const { classes } = this.props;
 
     return (
-        <div>
+        <div className="contactinformation" style={{ border: '3px solid black', borderRadius: 4, padding: `15px 15px`, marginTop: 10}}>
+        <h1>Contact Information</h1>
       <form className={classes.container} noValidate autoComplete="off">
        <TextField
           required
