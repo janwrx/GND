@@ -103,9 +103,9 @@ class TextFields extends React.Component {
         />
         <TextField
           id="standard-password-input"
-          label="Password"
+          label="Password1"
           className={classes.textField}
-          type="password"
+          type="password1"
           autoComplete="current-password"
           margin="normal"
         />
