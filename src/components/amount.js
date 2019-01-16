@@ -5,10 +5,14 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
+import classNames from 'classnames';
+import TextField from '@material-ui/core/TextField';
+import InputAdornment from '@material-ui/core/InputAdornment';
 
 const styles = theme => ({
   root: {
-
+    display: 'flex',
+    flexWrap: 'wrap',
   },
   formControl: {
     margin: theme.spacing.unit * 3,
@@ -21,7 +25,8 @@ const styles = theme => ({
 
 class RadioButtonsGroup extends React.Component {
   state = {
-    value: '21',
+    value: '',
+    amount:'',
   };
 
   handleChange = event => {
@@ -34,10 +39,8 @@ class RadioButtonsGroup extends React.Component {
     return (
       <div className={classes.root} style={{ border: '3px solid black', borderRadius: 4, padding: `15px 15px`, marginTop: 10}}>
       <h1>Donation Amount</h1>
-        <FormControl component="fieldset" className={classes.formControl} style={{display: `float`}}>
+        <FormControl component="fieldset" className={classes.formControl}>
           <RadioGroup
-            aria-label="Amount"
-            name="amount1"
             className={classes.group}
             value={this.state.value}
             onChange={this.handleChange}
@@ -47,7 +50,16 @@ class RadioButtonsGroup extends React.Component {
             <FormControlLabel value="41" control={<Radio />} label="$41" />
             <FormControlLabel value="51" control={<Radio />} label="$51" />
             <FormControlLabel value="101" control={<Radio />} label="$101" />
-            
+            <TextField
+          id="outlined-adornment-amount"
+          className={classNames(classes.margin, classes.textField)}
+          variant="outlined"
+          label="Other"
+          InputProps={{
+            startAdornment: <InputAdornment position="start">$</InputAdornment>,
+          }}
+          control={<Radio />}
+        />
           </RadioGroup>
         </FormControl>
       </div>
