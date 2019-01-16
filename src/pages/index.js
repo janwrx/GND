@@ -10,7 +10,6 @@ import Stripe from '../components/stripe'
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-  
     <About />
     <Contactform />
     <Amount />

@@ -8,6 +8,7 @@ import FormControl from '@material-ui/core/FormControl';
 import classNames from 'classnames';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import '../assets/amount.css'
 
 const styles = theme => ({
   root: {
@@ -37,7 +38,7 @@ class RadioButtonsGroup extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div className={classes.root} style={{ border: '3px solid black', borderRadius: 4, padding: `15px 15px`, marginTop: 10}}>
+      <div className="amountform" style={{ padding: `15px 25px`, marginTop: 10}}>
       <h1>Donation Amount</h1>
         <FormControl component="fieldset" className={classes.formControl}>
           <RadioGroup

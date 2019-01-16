@@ -1,25 +1,23 @@
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import '../assets/header.css'
 
 const Header = ({ siteTitle }) => (
-  <div
+  <div className="header"
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`, 
+      margin: 0,
+      padding: 0,
       position: `fixed`
     }}
   >
+  <img src="/images/gatsby-icon.png" style={{width: 30, height: 30, margin: 0, paddingTop: 5}} />
     <div
       style={{
-        margin: `0`,
         width: `100vw`,
         paddingTop: `1px`
       }}
     >
-    <div className="headerlogos">
-      <img src="https://img.icons8.com/metro/1600/settings.png" style={{ width: 30, height: `auto`}} />
-      <img src="https://www.securemessagingapps.com/wp-content/uploads/2016/09/cropped-security-shield-lock-512.png" style={{ width: 30, height: `auto`, float: `right`,  }}/>
       </div>
       <h1 style={{ margin: 0 }}>
         <Link
@@ -33,7 +31,6 @@ const Header = ({ siteTitle }) => (
         </Link>
       </h1>
     </div>
-  </div>
 )
 
 Header.propTypes = {

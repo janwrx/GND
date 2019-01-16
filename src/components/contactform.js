@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
+import '../assets/contactform.css'
 
 const styles = theme => ({
   container: {
@@ -64,7 +65,7 @@ class TextFields extends React.Component {
     const { classes } = this.props;
 
     return (
-        <div className="contactinformation" style={{ border: '3px solid black', borderRadius: 4, padding: `15px 15px`, marginTop: 10}}>
+        <div className="contactinformation" style={{  padding: `15px 25px`, marginTop: 10}}>
         <h1>Contact Information</h1>
       <form className={classes.container} noValidate autoComplete="off">
        <TextField

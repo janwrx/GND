@@ -1,0 +1,14 @@
+.payment {
+    background-color: white;
+    border-radius: 15px;
+}
+
+.checkout {
+    padding: 5px 5px;
+    border-radius: 5px;
+    background-color: lightgray;
+}
+
+.label {
+    color: white
+}
