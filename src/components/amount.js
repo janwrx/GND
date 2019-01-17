@@ -40,6 +40,7 @@ class RadioButtonsGroup extends React.Component {
     return (
       <div className="amountform" style={{ padding: `15px 25px`, marginTop: 10}}>
       <h1>Donation Amount</h1>
+        <div className="radios">
         <FormControl component="fieldset" className={classes.formControl}>
           <RadioGroup
             className={classes.group}
@@ -63,6 +64,7 @@ class RadioButtonsGroup extends React.Component {
         />
           </RadioGroup>
         </FormControl>
+        </div>
       </div>
     );
   }

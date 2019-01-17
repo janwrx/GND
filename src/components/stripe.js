@@ -19,3 +19,4 @@ class Stripe extends Component {
 }
 
 export default Stripe;
+

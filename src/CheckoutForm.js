@@ -23,12 +23,10 @@ class CheckoutForm extends Component {
   render() {
     return (
       <div className="checkout">
-        <CardElement />
-        <Button variant= "outlined" size="medium" color="primary" onClick={this.submit}>Donate </Button>
-      </div>
+      <CardElement />
+        <center><Button variant= "outlined" size="medium" onClick={this.submit} style={{backgroundColor: `#112E5C`, height: 40, width: 150}}><span>Donate</span></Button></center>
+        </div>
     );
   }
 }
-
-
 export default injectStripe(CheckoutForm);

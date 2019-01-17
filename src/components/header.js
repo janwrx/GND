@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => (
       position: `fixed`
     }}
   >
-  <img src="/images/gatsby-icon.png" style={{width: 30, height: 30, margin: 0, paddingTop: 5}} />
+  <img src="/images/privatelock.png" alt="Secure Response Logo" style={{ margin: 0, paddingTop: 5}} /> <span className="imgtext">Secure Response</span>
     <div
       style={{
         width: `100vw`,
@@ -25,9 +25,12 @@ const Header = ({ siteTitle }) => (
           style={{
             color: `white`,
             textDecoration: `none`,
+            top: `15`
           }}
         >
+        <div className="gndtitle">
           {siteTitle}
+          </div>
         </Link>
       </h1>
     </div>

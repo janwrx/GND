@@ -6,14 +6,18 @@ import Contactform from '../components/contactform'
 import About from '../components/about'
 import Amount from '../components/amount'
 import Stripe from '../components/stripe'
+import Checkout from '../components/checkout'
+import PersonList from '../components/PersonList'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]}/>
     <About />
     <Contactform />
     <Amount />
     <Stripe />
+    <Checkout />
+    <PersonList />
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )

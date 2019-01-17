@@ -9,6 +9,10 @@
     background-color: lightgray;
 }
 
+.checkout span {
+    color: white;
+}
+
 .label {
     color: white
 }

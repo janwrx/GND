@@ -1,3 +1,21 @@
 .header {
     background-color: #888C8F;
 }
+
+.gndtitle {
+    padding: 10px;
+}
+
+.header img {
+    float: right;
+    height: 55px;
+    padding-right: 10px
+}
+.imgtext {
+    color: white;
+    position: absolute; 
+    top: 15px;
+    right: 60px;
+    width: 80px;
+    line-height: 1;
+}
