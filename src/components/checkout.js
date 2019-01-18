@@ -15,14 +15,14 @@ const buttonStyles = {
 const Checkout = class extends React.Component {
   componentDidMount() {
     this.stripe = window.Stripe("pk_test_94XpbRPINz9LfTaFE0KPSolg", {
-      betas: ["checkout_beta_4"],
-    })
+      betas: ['checkout_beta_4']
+})
   }
 
   async redirectToCheckout(event) {
     event.preventDefault()
     const { error } = await this.stripe.redirectToCheckout({
-      items: [{ sku: "sku_EJPwfODl9YaSFU", quantity: 1 }],
+      items: [{ sku: "sku_EM6rv2fNlOD2Sl", quantity: 1 }],
       successUrl: `http://localhost:8000/page-2/`,
       cancelUrl: `http://localhost:8000/`,
     })

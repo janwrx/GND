@@ -27,7 +27,6 @@ const styles = theme => ({
 class RadioButtonsGroup extends React.Component {
   state = {
     value: '',
-    amount:'',
   };
 
   handleChange = event => {
@@ -36,7 +35,7 @@ class RadioButtonsGroup extends React.Component {
 
   render() {
     const { classes } = this.props;
-
+    console.log(this.state)
     return (
       <div className="amountform" style={{ padding: `15px 25px`, marginTop: 10}}>
       <h1>Donation Amount</h1>
@@ -47,11 +46,11 @@ class RadioButtonsGroup extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           >
-            <FormControlLabel value="11" control={<Radio />} label="$11" />
-            <FormControlLabel value="21" control={<Radio />} label="$21" />
-            <FormControlLabel value="41" control={<Radio />} label="$41" />
-            <FormControlLabel value="51" control={<Radio />} label="$51" />
-            <FormControlLabel value="101" control={<Radio />} label="$101" />
+            <FormControlLabel value="1100" control={<Radio />} label="$11" />
+            <FormControlLabel value="2100" control={<Radio />} label="$21" />
+            <FormControlLabel value="4100" control={<Radio />} label="$41" />
+            <FormControlLabel value="5100" control={<Radio />} label="$51" />
+            <FormControlLabel value="10100" control={<Radio />} label="$101" />
             <TextField
           id="outlined-adornment-amount"
           className={classNames(classes.margin, classes.textField)}
