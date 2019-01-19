@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
+import Helmet from 'react-helmet'
 import './layout.css'
 
 const Layout = ({ children }) => (
@@ -17,6 +18,9 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
+      <Helmet >
+      <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+      </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{

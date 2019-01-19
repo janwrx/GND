@@ -3,3 +3,12 @@
     border-radius: 15px;
     
 }
+
+.btntext span {
+    border: 3px black solid;
+    background-color: red;
+    font-size: 30px;
+    height: 70px;
+    padding-bottom: 300px;
+    width: 100%;
+}

@@ -14,7 +14,9 @@ class Stripe extends Component {
           </Elements>
           </StripeProvider>
         </div>
+        
     );
+    
   }
 }
 

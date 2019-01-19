@@ -236,6 +236,7 @@ h1 {
   font-size: 2.25rem;
   line-height: 1.1;
   color: #112E5C;
+  text-shadow: 2px 2px #c7c7c79c;
 }
 h2 {
   margin-left: 0;
@@ -615,8 +616,15 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
-@media only screen and (max-width: 480px) {
+
+@media only screen and (max-width: 768px) {
   html {
-    font-size: 100%;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    width: 100%;
   }
 }

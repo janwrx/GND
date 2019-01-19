@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `GND Donation`,
+    title: `GND`,
     description: `Donation Page`,
     author: `@Janice Zosa`,
   },

@@ -28,199 +28,199 @@ const styles = theme => ({
 const states = [
 
   {
-    value: 'Alabama',
+    value: 'USA_AL',
     label: 'AL',
   },
   {
-    value: 'Alaska',
+    value: 'USA_AK',
     label: 'AK',
   },
   {
-    value: 'Arizona',
+    value: 'USA_AZ',
     label: 'AZ',
   },
   {
-    value: 'Arkansas',
+    value: 'USA_AR',
     label: 'AR',
   },
   {
-    value: 'California',
+    value: 'USA_CA',
     label: 'CA',
   },
   {
-    value: 'Colorado',
+    value: 'USA_CO',
     label: 'CO',
   },
   {
-    value: 'Connecticut',
+    value: 'USA_CT',
     label: 'CT',
   },
   {
-    value: 'Delaware',
+    value: 'USA_DE',
     label: 'DE',
   },
   {
-    value: 'Florida',
+    value: 'USA_FL',
     label: 'FL',
   },
   {
-    value: 'Georgia',
+    value: 'USA_GA',
     label: 'GA',
   },
   {
-    value: 'Hawaii',
+    value: 'USA_HI',
     label: 'HI',
   },
   {
-    value: 'Idaho',
+    value: 'USA_ID',
     label: 'ID',
   },
   {
-    value: 'Illinois',
+    value: 'USA_IL',
     label: 'IL',
   },
   {
-    value: 'Indiana',
+    value: 'USA_IN',
     label: 'IN',
   },
   {
-    value: 'Iowa',
+    value: 'USA_IA',
     label: 'IA',
   },
   {
-    value: 'Kansas',
+    value: 'USA_KS',
     label: 'KS',
   },
   {
-    value: 'Kentucky',
+    value: 'USA_KY',
     label: 'KY',
   },
   {
-    value: 'Louisiana',
+    value: 'USA_LA',
     label: 'LA',
   },
   {
-    value: 'Maine',
+    value: 'USA_ME',
     label: 'ME',
   },
   {
-    value: 'Maryland',
+    value: 'USA_MD',
     label: 'MD',
   },
   {
-    value: 'Massachusetts',
+    value: 'USA_MA',
     label: 'MA',
   },
   {
-    value: 'Michigan',
+    value: 'USA_MI',
     label: 'MI',
   },
   {
-    value: 'Mississippi',
+    value: 'USA_MS',
     label: 'MS',
   },
   {
-    value: 'Missouri',
+    value: 'USA_MO',
     label: 'MO',
   },
   {
-    value: 'Montana',
+    value: 'USA_MT',
     label: 'MT',
   },
   {
-    value: 'Nebraska',
+    value: 'USA_NE',
     label: 'NE',
   },
   {
-    value: 'Nevada',
+    value: 'USA_NV',
     label: 'NV',
   },
   {
-    value: 'New Hampshire',
+    value: 'USA_NH',
     label: 'NH',
   },
   {
-    value: 'New Jersey',
+    value: 'USA_NJ',
     label: 'NJ',
   },
   {
-    value: 'New Mexico',
+    value: 'USA_NM',
     label: 'NM',
   },
   {
-    value: 'New York',
+    value: 'USA_NY',
     label: 'NY',
   },
   {
-    value: 'North Carolina',
+    value: 'USA_NC',
     label: 'NC',
   },
   {
-    value: 'North Dakota',
+    value: 'USA_ND',
     label: 'ND',
   },
   {
-    value: 'Ohio',
+    value: 'USA_OH',
     label: 'OH',
   },
   {
-    value: 'Oklahoma',
+    value: 'USA_OK',
     label: 'OK',
   },
   {
-    value: 'Oregon',
+    value: 'USA_OR',
     label: 'OR',
   },
   {
-    value: 'Pennsylvania',
+    value: 'USA_PA',
     label: 'PA',
   },
   {
-    value: 'Rhode Island',
+    value: 'USA_RI',
     label: 'RI',
   },
   {
-    value: 'South Carolina',
+    value: 'USA_SC',
     label: 'SC',
   },
   {
-    value: 'South Dakota',
+    value: 'USA_SD',
     label: 'SD',
   },
   {
-    value: 'Tennessee',
+    value: 'USA_TN',
     label: 'TN',
   },
   {
-    value: 'Texas',
+    value: 'USA_TX',
     label: 'TX',
   },  
   {
-    value: 'Utah',
+    value: 'USA_UT',
     label: 'UT',
   },
   {
-    value: 'Vermont',
+    value: 'USA_VT',
     label: 'VT',
   },
   {
-    value: 'Virginia',
+    value: 'USA_VA',
     label: 'VA',
   },
   {
-    value: 'Washington',
+    value: 'USA_WA',
     label: 'WA',
   },
   {
-    value: 'West Virginia',
+    value: 'USA_WV',
     label: 'WV',
   },
   {
-    value: 'Wisconsin',
+    value: 'USA_WI',
     label: 'WI',
   },
   {
-    value: 'Wyoming',
+    value: 'USA_WY',
     label: 'WY',
   },
 ];
@@ -363,7 +363,6 @@ class TextFields extends React.Component {
         <TextField
           required
           id="standard-email-input"
-          name="e-mail"
           label="Email"
           className={classes.textField}
           type="email"
@@ -375,6 +374,7 @@ class TextFields extends React.Component {
         />
          <button type="submit">Add</button>
       </form>
+
       </div>
     );
   }

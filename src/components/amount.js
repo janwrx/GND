@@ -9,6 +9,7 @@ import classNames from 'classnames';
 import TextField from '@material-ui/core/TextField';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import '../assets/amount.css'
+import StripeCheckout from 'react-stripe-checkout';
 
 const styles = theme => ({
   root: {
@@ -33,8 +34,26 @@ class RadioButtonsGroup extends React.Component {
     this.setState({ value: event.target.value });
   };
 
+  handleClick = e => {
+    // let parsedValue = parseInt(e.target.value)
+    // console.log(`this is the target value: ${e.target.value}`)
+    // console.log(`this is the parsed value: ${parsedValue}`)
+    this.setState({ value: e.target.value });
+  };
+
+  onToken = (token, addresses) => {
+    // TODO: Send the token information and any other
+    // relevant information to your payment process
+    // server, wait for the response, and update the UI
+    // accordingly. How this is done is up to you. Using
+    // XHR, fetch, or a GraphQL mutation is typical.
+  };
+
+
   render() {
     const { classes } = this.props;
+   
+    
     console.log(this.state)
     return (
       <div className="amountform" style={{ padding: `15px 25px`, marginTop: 10}}>
@@ -46,11 +65,11 @@ class RadioButtonsGroup extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           >
-            <FormControlLabel value="1100" control={<Radio />} label="$11" />
-            <FormControlLabel value="2100" control={<Radio />} label="$21" />
-            <FormControlLabel value="4100" control={<Radio />} label="$41" />
-            <FormControlLabel value="5100" control={<Radio />} label="$51" />
-            <FormControlLabel value="10100" control={<Radio />} label="$101" />
+            <FormControlLabel value="11.00" control={<Radio onClick={e => this.handleClick(e)} />} label="$11.00" />
+            <FormControlLabel value="21.00" control={<Radio />} label="$21.00" />
+            <FormControlLabel value="41.00" control={<Radio />} label="$41.00" />
+            <FormControlLabel value="51.00" control={<Radio />} label="$51.00" />
+            <FormControlLabel value="101.00" control={<Radio />} label="$101.00" />
             <TextField
           id="outlined-adornment-amount"
           className={classNames(classes.margin, classes.textField)}
@@ -63,6 +82,18 @@ class RadioButtonsGroup extends React.Component {
         />
           </RadioGroup>
         </FormControl>
+        </div>
+        <div className="stripebutton"> 
+      <StripeCheckout
+      amount={parseInt(this.state.value) * 100}
+      panelLabel="Donate {{amount}}"
+      image="/images/logognd.png"
+      label="Donate Now"
+      locale="auto"
+      name="GND Donation"
+        stripeKey="pk_test_94XpbRPINz9LfTaFE0KPSolg"
+        token={this.onToken}
+      />
         </div>
       </div>
     );

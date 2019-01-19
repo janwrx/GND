@@ -8,10 +8,12 @@ const Header = ({ siteTitle }) => (
     style={{
       margin: 0,
       padding: 0,
+      size: 20,
       position: `fixed`
     }}
   >
-  <img src="/images/privatelock.png" alt="Secure Response Logo" style={{ margin: 0, paddingTop: 5}} /> <span className="imgtext">Secure Response</span>
+  <img className="gndlogo" src="/images/logognd.png" alt="GND Logo" style={{ margin: 0, paddingTop: 5}} />
+  <img className="privatelock" src="/images/privatelock.png" alt="Secure Response Logo" style={{ margin: 0, paddingTop: 5}} /> <span className="imgtext">Secure Response</span>
     <div
       style={{
         width: `100vw`,
