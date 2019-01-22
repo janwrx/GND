@@ -33,8 +33,8 @@ const Layout = ({ children }) => (
           {children}
           </div>
 
-          <footer style={{background: `#888C8F`, color: `white`, alignText: `center`, padding: 15}}>
-            <center><p>Guru Nanak Dwara is a tax-exempt 501c(3) non-profit charitable organization. Every generous donation is tax deductible in the USA. </p></center>
+          <footer style={{background: `#888C8F`, color: `white`, alignText: `center`, paddingTop: 10, paddingBottom: 10, height: 70}}>
+            <center><h6>Guru Nanak Dwara is a tax-exempt 501c(3) non-profit charitable organization. Every generous donation is tax deductible in the USA. </h6></center>
           </footer>
       </>
     )}

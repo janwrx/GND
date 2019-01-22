@@ -264,7 +264,7 @@ class TextFields extends React.Component {
     return (
         <div className="contactinformation" style={{  padding: `15px 25px`, marginTop: 10}}>
         <h1>Contact Information</h1>
-      <form onSubmit={this.handleSubmit} className={classes.container} noValidate autoComplete="off">
+      <form onSubmit={this.handleSubmit} className={classes.container}>
        <TextField
           required
           id="standard-required"
@@ -272,7 +272,7 @@ class TextFields extends React.Component {
           label="First name"
           placeholder="ex. John"
           value={this.state.firstName}
-          onChange={this.handleChange('firstName')}
+          onChange={this.handleChange('firstName')} 
           className={classes.textField}
           margin="normal"
         />

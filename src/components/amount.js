@@ -42,11 +42,9 @@ class RadioButtonsGroup extends React.Component {
   };
 
   onToken = (token, addresses) => {
-    // TODO: Send the token information and any other
-    // relevant information to your payment process
-    // server, wait for the response, and update the UI
-    // accordingly. How this is done is up to you. Using
-    // XHR, fetch, or a GraphQL mutation is typical.
+    window.location.replace('thankyou');
+    // once payment and token is logged, page redirects to ty page
+    // replaces the current history item so you can't go back to it
   };
 
 
@@ -91,8 +89,8 @@ class RadioButtonsGroup extends React.Component {
       label="Donate Now"
       locale="auto"
       name="GND Donation"
-        stripeKey="pk_test_94XpbRPINz9LfTaFE0KPSolg"
-        token={this.onToken}
+      stripeKey="pk_test_94XpbRPINz9LfTaFE0KPSolg"
+      token={this.onToken}
       />
         </div>
       </div>

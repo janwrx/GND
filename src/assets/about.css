@@ -6,3 +6,8 @@
     background-color: white;
     border-radius: 15px;
 }
+
+.about::first-letter{
+    font-size: 200%;
+    color: #112E5C;
+  }
