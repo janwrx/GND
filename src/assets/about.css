@@ -8,6 +8,11 @@
 }
 
 .about::first-letter{
-    font-size: 200%;
+    font-size: 300%;
     color: #112E5C;
   }
+
+.aboutus p {
+    text-indent: 5%;
+    text-align: justify;
+}

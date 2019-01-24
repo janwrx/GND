@@ -5,7 +5,7 @@ import SEO from '../components/seo';
 import Contactform from '../components/contactform';
 import About from '../components/about';
 import Amount from '../components/amount';
-import Stripe from '../components/stripe';
+// import Stripe from '../components/stripe';
 import { Formik } from "formik";
 
 const IndexPage = () => (
@@ -15,7 +15,7 @@ const IndexPage = () => (
     <Formik
              render={props => <Contactform {...props} />}/>
     <Amount />
-    <Stripe />
+    {/* <Stripe /> */}
     <Link to="/page-2/">Go to page 2</Link>
   </Layout>
 )

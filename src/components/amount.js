@@ -15,12 +15,16 @@ const styles = theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
+    fontFamily: 'Helvetica'
+
   },
   formControl: {
     margin: theme.spacing.unit * 3,
+
   },
   group: {
     margin: `${theme.spacing.unit}px 0`,
+    flexDirection: 'row',
   },
   
 });
@@ -56,34 +60,36 @@ class RadioButtonsGroup extends React.Component {
     return (
       <div className="amountform" style={{ padding: `15px 25px`, marginTop: 10}}>
       <h1>Donation Amount</h1>
-        <div className="radios">
+      <center>
         <FormControl component="fieldset" className={classes.formControl}>
           <RadioGroup
             className={classes.group}
             value={this.state.value}
             onChange={this.handleChange}
           >
-            <FormControlLabel value="11.00" control={<Radio onClick={e => this.handleClick(e)} />} label="$11.00" />
+            <FormControlLabel value="11.00" control={<Radio onClick={e => this.handleClick(e)} />} label="$11.00" /> 
             <FormControlLabel value="21.00" control={<Radio />} label="$21.00" />
             <FormControlLabel value="41.00" control={<Radio />} label="$41.00" />
             <FormControlLabel value="51.00" control={<Radio />} label="$51.00" />
             <FormControlLabel value="101.00" control={<Radio />} label="$101.00" />
+        
             <TextField
+          style={{maxWidth:120}}
           id="outlined-adornment-amount"
           className={classNames(classes.margin, classes.textField)}
           variant="outlined"
-          label="Other"
+          placeholder="Other"
           InputProps={{
             startAdornment: <InputAdornment position="start">$</InputAdornment>,
           }}
           control={<Radio />}
         />
+
           </RadioGroup>
         </FormControl>
-        </div>
         <div className="stripebutton"> 
       <StripeCheckout
-      amount={parseInt(this.state.value) * 100}
+      amount={parseInt(this.state.value*100)}
       panelLabel="Donate {{amount}}"
       image="/images/logognd.png"
       label="Donate Now"
@@ -91,8 +97,9 @@ class RadioButtonsGroup extends React.Component {
       name="GND Donation"
       stripeKey="pk_test_94XpbRPINz9LfTaFE0KPSolg"
       token={this.onToken}
-      />
+      /> 
         </div>
+        </center>
       </div>
     );
   }

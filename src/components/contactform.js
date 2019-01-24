@@ -5,19 +5,22 @@ import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import '../assets/contactform.css'
 import axios from 'axios'
+import Tooltip from '@material-ui/core/Tooltip';
+import * as Yup from "yup";
 
 const styles = theme => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
+    justifyContent: 'center'
   },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: 200,
+    width: 250,
   },
   dense: {
-    marginTop: 19,
+    marginTop: 16,
   },
   menu: {
     width: 200,
@@ -26,6 +29,7 @@ const styles = theme => ({
 });
 
 const states = [
+
 
   {
     value: 'USA_AL',
@@ -225,6 +229,7 @@ const states = [
   },
 ];
 
+
 class TextFields extends React.Component {
   state = {
     firstName: '',
@@ -236,6 +241,7 @@ class TextFields extends React.Component {
     stateProviceGeoId: '',
     postalCode: '',
     email: '',
+    
   };
 
   handleChange = name => event => {
@@ -264,7 +270,9 @@ class TextFields extends React.Component {
     return (
         <div className="contactinformation" style={{  padding: `15px 25px`, marginTop: 10}}>
         <h1>Contact Information</h1>
+
       <form onSubmit={this.handleSubmit} className={classes.container}>
+      <Tooltip title="First Name" placement="bottom">
        <TextField
           required
           id="standard-required"
@@ -275,7 +283,10 @@ class TextFields extends React.Component {
           onChange={this.handleChange('firstName')} 
           className={classes.textField}
           margin="normal"
+          variant="outlined"
         />
+        </Tooltip>
+        <Tooltip title="Middle Initial" placement="bottom">
        <TextField
           id="standard"
           name="middleName"
@@ -285,7 +296,11 @@ class TextFields extends React.Component {
           onChange={this.handleChange('middleName')}
           className={classes.textField}
           margin="normal"
+          variant="outlined"
+          padding="0"
         />
+        </Tooltip>
+        <Tooltip title="Last Name" placement="bottom">
        <TextField
           required
           id="standard-required"
@@ -295,8 +310,11 @@ class TextFields extends React.Component {
           value={this.state.lastName}
           onChange={this.handleChange('lastName')}
           className={classes.textField}
+          variant="outlined"
           margin="normal"
         />
+       </Tooltip>
+       <Tooltip title="Street Address" placement="bottom">
        <TextField
           required
           id="standard-required"
@@ -307,7 +325,10 @@ class TextFields extends React.Component {
           onChange={this.handleChange('address1')}
           className={classes.textField}
           margin="normal"
+          variant="outlined"
         />
+        </Tooltip>
+        <Tooltip title="Unit/Apt. #" placement="bottom">
         <TextField
           id="standard"
           name="address2"
@@ -316,7 +337,10 @@ class TextFields extends React.Component {
           onChange={this.handleChange('address2')}
           className={classes.textField}
           margin="normal"
+          variant="outlined"
         />
+        </Tooltip>
+        <Tooltip title="City" placement="bottom">
        <TextField
           required
           id="standard-required"
@@ -326,10 +350,14 @@ class TextFields extends React.Component {
           onChange={this.handleChange('city')}
           className={classes.textField}
           margin="normal"
+          variant="outlined"
         />
+        </Tooltip>
+        <Tooltip title="State" placement="bottom">
         <TextField
+          required
           id="standard-select-state"
-          select required
+          select
           name="stateProviceGeoId"
           label="State"
           className={classes.textField}
@@ -340,8 +368,8 @@ class TextFields extends React.Component {
               className: classes.menu,
             },
           }}
-          helperText="Please select your state"
           margin="normal"
+          variant="outlined"
         >
           {states.map(option => (
             <MenuItem key={option.value} value={option.value}>
@@ -349,17 +377,22 @@ class TextFields extends React.Component {
             </MenuItem>
           ))}
         </TextField>
+        </Tooltip>
+        <Tooltip title="Postal Code" placement="bottom">
        <TextField
           required
           id="standard-required"
           name="postalCode"
           label="Postal Code"
-          placeholder="55555"
+          placeholder="ex. 55555"
           value={this.state.postalCode}
           onChange={this.handleChange('postalCode')}
           className={classes.textField}
           margin="normal"
+          variant="outlined"
         />
+        </Tooltip>
+        <Tooltip title="Email" placement="bottom">
         <TextField
           required
           id="standard-email-input"
@@ -371,10 +404,14 @@ class TextFields extends React.Component {
           onChange={this.handleChange('email')}
           autoComplete="email"
           margin="normal"
+          variant="outlined"
         />
-         <button type="submit">Add</button>
-      </form>
-
+        </Tooltip>
+        <br/>
+        <br/>
+        <br/>
+        <button className="button" size="medium" onClick={this.submit} style={{borderRadius: 5, backgroundColor: `#112E5C`, fontSize: 14, margin: 30, color: `white`, height: 40, width: 190}}><span>Add Customer Information</span></button>
+        </form>
       </div>
     );
   }

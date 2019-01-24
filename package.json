@@ -24,7 +24,8 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-stripe-checkout": "^2.6.3",
-    "react-stripe-elements": "^2.0.2"
+    "react-stripe-elements": "^2.0.2",
+    "yup": "^0.26.7"
   },
   "keywords": [
     "gatsby"
