@@ -6,18 +6,20 @@ import TextField from '@material-ui/core/TextField';
 import '../assets/contactform.css'
 import axios from 'axios'
 import Tooltip from '@material-ui/core/Tooltip';
+import Button from "@material-ui/core/Button";
 import * as Yup from "yup";
 
 const styles = theme => ({
   container: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
     width: 250,
+    height: 50,
   },
   dense: {
     marginTop: 16,
@@ -27,6 +29,8 @@ const styles = theme => ({
   },
   
 });
+
+
 
 const states = [
 
@@ -296,8 +300,8 @@ class TextFields extends React.Component {
           onChange={this.handleChange('middleName')}
           className={classes.textField}
           margin="normal"
-          variant="outlined"
           padding="0"
+          variant="outlined"
         />
         </Tooltip>
         <Tooltip title="Last Name" placement="bottom">
@@ -310,8 +314,8 @@ class TextFields extends React.Component {
           value={this.state.lastName}
           onChange={this.handleChange('lastName')}
           className={classes.textField}
-          variant="outlined"
           margin="normal"
+          variant="outlined"
         />
        </Tooltip>
        <Tooltip title="Street Address" placement="bottom">
@@ -403,14 +407,12 @@ class TextFields extends React.Component {
           value={this.state.email}
           onChange={this.handleChange('email')}
           autoComplete="email"
+          placeholder="ex. hi@email.com"
           margin="normal"
           variant="outlined"
         />
         </Tooltip>
-        <br/>
-        <br/>
-        <br/>
-        <button className="button" size="medium" onClick={this.submit} style={{borderRadius: 5, backgroundColor: `#112E5C`, fontSize: 14, margin: 30, color: `white`, height: 40, width: 190}}><span>Add Customer Information</span></button>
+        <Button className="button" size="medium" type="submit" onSubmit={this.submit} style={{borderRadius: 5, backgroundColor: `#112E5C`, fontSize: 14, margin: 30, color: `white`, height: 50, width: 190, paddingTop:0}}><span>Add Customer Information</span></Button>
         </form>
       </div>
     );

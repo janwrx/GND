@@ -58,7 +58,7 @@ class RadioButtonsGroup extends React.Component {
     
     console.log(this.state)
     return (
-      <div className="amountform" style={{ padding: `15px 25px`, marginTop: 10}}>
+      <div className="amountform" style={{ padding: `15px 25px`, marginTop: 10, marginBottom: 30}}>
       <h1>Donation Amount</h1>
       <center>
         <FormControl component="fieldset" className={classes.formControl}>
