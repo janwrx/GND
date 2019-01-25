@@ -7,12 +7,17 @@
     border-radius: 15px;
 }
 
-.about::first-letter{
-    font-size: 300%;
-    color: #112E5C;
-  }
+.firstletter {
+    color: #3B5998;
+    float: left;
+    font-family: Georgia;
+    font-size: 70px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
 
 .aboutus p {
-    text-indent: 5%;
     text-align: justify;
 }

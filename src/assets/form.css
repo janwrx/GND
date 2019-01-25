@@ -1,0 +1,7 @@
+.form .textfield{
+    margin-left: 6px;
+    margin-right: 6px;
+    width: 250;
+    height: 50;
+    z-index: 0;
+}

@@ -2,6 +2,7 @@
     background-color: #888C8F;
     position: fixed;
     z-index: 1;
+    width: 100vw
 }
 
 .gndtitle {
