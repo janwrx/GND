@@ -5,7 +5,20 @@ import Tooltip from "@material-ui/core/Tooltip";
 import MenuItem from "@material-ui/core/MenuItem";
 import "../assets/form.css";
 
-export const Form = props => {
+class Form extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+
+  change = (name, e) => {
+    e.persist();
+    this.props.handleChange(e);
+    this.props.setFieldTouched(name, true, false
+      );
+  };
+
+ render() {
   const {
     values: {
       firstName,
@@ -24,7 +37,7 @@ export const Form = props => {
     isValid,
     handleSubmit,
     setFieldTouched
-  } = props;
+  } = this.props;
 
   const states = [
     {
@@ -229,23 +242,23 @@ export const Form = props => {
     }
   ];
 
-  const change = (name, e) => {
-    e.persist();
-    handleChange(e);
-    setFieldTouched(name, true, false);
-  };
+  const idk = () => {
+    console.log("idk")
+  }
+
+ 
   return (
     <div className="form">
-      <form style={{ textAlign: `center` }} onSubmit={handleSubmit}>
+      <form id="contactInfo" style={{ textAlign: `center` }} onSubmit={handleSubmit} method="post">
         <Tooltip title="First Name" placement="bottom">
           <TextField
-            required
+         
             id="standard-required"
             name="firstName"
-            label="First name"
+            label="First name*"
             placeholder="ex. John"
             value={firstName}
-            onChange={change.bind(null, "firstName")}
+            onChange={this.change.bind(null, "firstName")}
             helperText={touched.firstName ? errors.firstName : ""}
             error={touched.firstName && Boolean(errors.firstName)}
             margin="normal"
@@ -260,7 +273,7 @@ export const Form = props => {
             label="MI"
             placeholder="ex. M"
             value={middleName}
-            onChange={change.bind(null, "middleName")}
+            onChange={this.change.bind(null, "middleName")}
             helperText={touched.middleName ? errors.middleName : ""}
             error={touched.middleName && Boolean(errors.middleName)}
             margin="normal"
@@ -271,13 +284,13 @@ export const Form = props => {
         </Tooltip>
         <Tooltip title="Last Name" placement="bottom">
           <TextField
-            required
+  
             id="standard-required"
             name="lastName"
-            label="Last name"
+            label="Last name*"
             placeholder="ex. Doe"
             value={lastName}
-            onChange={change.bind(null, "lastName")}
+            onChange={this.change.bind(null, "lastName")}
             helperText={touched.lastName ? errors.lastName : ""}
             error={touched.lastName && Boolean(errors.lastName)}
             margin="normal"
@@ -287,13 +300,13 @@ export const Form = props => {
         </Tooltip>
         <Tooltip title="Street Address" placement="bottom">
           <TextField
-            required
+        
             id="standard-required"
             name="address1"
-            label="Street Address"
+            label="Street Address*"
             placeholder="ex. 123 Ikea Avenue"
             value={address1}
-            onChange={change.bind(null, "address1")}
+            onChange={this.change.bind(null, "address1")}
             helperText={touched.address1 ? errors.address1 : ""}
             error={touched.address1 && Boolean(errors.address1)}
             margin="normal"
@@ -308,7 +321,7 @@ export const Form = props => {
             name="address2"
             label="Unit/Apt. #"
             value={address2}
-            onChange={change.bind(null, "address2")}
+            onChange={this.change.bind(null, "address2")}
             helperText={touched.address2 ? errors.address2 : ""}
             error={touched.address2 && Boolean(errors.address2)}
             margin="normal"
@@ -318,12 +331,12 @@ export const Form = props => {
         </Tooltip>
         <Tooltip title="City" placement="bottom">
           <TextField
-            required
+  
             id="standard-required"
             name="city"
-            label="City"
+            label="City*"
             value={city}
-            onChange={change.bind(null, "city")}
+            onChange={this.change.bind(null, "city")}
             helperText={touched.city ? errors.city : ""}
             error={touched.city && Boolean(errors.city)}
             margin="normal"
@@ -334,13 +347,13 @@ export const Form = props => {
         <Tooltip title="State" placement="bottom">
           <TextField
             style={{ width: 216 }}
-            required
+   
             id="standard-select-state"
             select
             name="stateProviceGeoId"
-            label="State"
+            label="State*"
             value={stateProviceGeoId}
-            onChange={change.bind(null, "stateProviceGeoId")}
+            onChange={this.change.bind(null, "stateProviceGeoId")}
             helperText={
               touched.stateProviceGeoId ? errors.stateProviceGeoId : ""
             }
@@ -365,13 +378,13 @@ export const Form = props => {
         </Tooltip>
         <Tooltip title="Postal Code" placement="bottom">
           <TextField
-            required
+           
             id="standard-required"
             name="postalCode"
-            label="Postal Code"
+            label="Postal Code*"
             placeholder="ex. 55555"
             value={postalCode}
-            onChange={change.bind(null, "postalCode")}
+            onChange={this.change.bind(null, "postalCode")}
             helperText={touched.postalCode ? errors.postalCode : ""}
             error={touched.postalCode && Boolean(errors.postalCode)}
             margin="normal"
@@ -381,13 +394,13 @@ export const Form = props => {
         </Tooltip>
         <Tooltip title="Email" placement="bottom">
           <TextField
-            required
+        
             id="standard-email-input"
-            label="Email"
+            label="E-mail*"
             type="email"
             name="emailAddress"
             value={emailAddress}
-            onChange={change.bind(null, "emailAddress")}
+            onChange={this.change.bind(null, "emailAddress")}
             helperText={touched.emailAddress ? errors.emailAddress : ""}
             error={touched.emailAddress && Boolean(errors.emailAddress)}
             placeholder="ex. hi@email.com"
@@ -417,4 +430,7 @@ export const Form = props => {
       </form>
     </div>
   );
+}
 };
+
+export default Form

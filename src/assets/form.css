@@ -1,7 +1,10 @@
-.form .textfield{
+#contactInfo .textfield {
+    
     margin-left: 6px;
     margin-right: 6px;
     width: 250;
     height: 50;
     z-index: 0;
+    text-align: center;
 }
+

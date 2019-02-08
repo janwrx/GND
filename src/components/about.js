@@ -20,18 +20,6 @@ const About = () => (
       meditation, singing, cooking, working and eating together.
     </p>
     <p style={{ textIndent: `5%` }}>
-      In 1972, Darshan Singh Teji, a good friend of Yogi Bhajan’s, helped the
-      Ashram members establish a Gurdwara. With loving attention, he instructed
-      them in the proper care and ceremonies surrounding the Guru, which has
-      proven to be a guiding light these many years. By 1980, the land where
-      Guru Nanak Dwara currently resides, was purchased and the community
-      focused on creating a ‘village lifestyle’, with many family dwellings
-      surrounding the main center. By the mid-80s, Sikhs originally from Punjab
-      India, were attracted in large numbers to Guru Nanak Dwara, mainly due to
-      the feeling of peaceful contemplation emanating from the community’s
-      practices.
-    </p>
-    <p style={{ textIndent: `5%` }}>
       The new Guru Nanak Dwara structure began in 1996 to provide the community
       with the infrastructure necessary for a bright and flourishing future,
       embracing the traditions of both East and West. The dynamic blend of a
