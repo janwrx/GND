@@ -1,0 +1,25 @@
+#contactInfo .amountform {
+    background-color: white;
+    border-radius: 15px;
+    padding: 100px;
+    
+}
+
+#contactInfo .btntext span {
+    border: 3px black solid;
+    background-color: red;
+    font-size: 30px;
+    height: 70px;
+    padding-bottom: 300px;
+    width: 100%;
+}
+
+#contactInfo .radiobtn {
+
+    color: white;
+    background-color: #C0C0C0;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin: 10px;
+
+}

@@ -1,0 +1,23 @@
+.gndimg {
+    border-radius: 3px
+}
+
+.aboutus {
+    background-color: white;
+    border-radius: 15px;
+}
+
+.firstletter {
+    color: #3B5998;
+    float: left;
+    font-family: Georgia;
+    font-size: 70px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+
+.aboutus p {
+    text-align: justify;
+}
