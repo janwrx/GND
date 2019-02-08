@@ -4,7 +4,7 @@ import "../assets/about.css";
 const About = () => (
   <div className="aboutus" style={{ padding: `15px 25px` }}>
     <h1>About Us</h1>
-    <img className="gndimg" src="/images/GNDphoto.jpg" alt="GND" />
+    <img className="gndimg" src="/images/donationpage.jpg" alt="GND" />
     <p className="about">
       <span style={{ textIndent: `5%` }} className="firstletter">
         G
